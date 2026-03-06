@@ -1,0 +1,218 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: RH_BACKEND
+meta:
+  id: wrk_3f53d594d5304f02b82240a50ed61225
+  created: 1772808236178
+  modified: 1772808236178
+  description: ""
+collection:
+  - url: http://localhost:4000/colaboradores
+    name: Listar Todos os Colaboradores
+    meta:
+      id: req_f9d6c39df6634e079e87181a1fafd6cb
+      created: 1772808488964
+      modified: 1772808718312
+      isPrivate: false
+      description: ""
+      sortKey: -1772808488964
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/colaboradores/:id
+    name: Listar colaborador por Id
+    meta:
+      id: req_c1146fa9981b4f79bbf03eace4c9cf85
+      created: 1772808743261
+      modified: 1772808892197
+      isPrivate: false
+      description: ""
+      sortKey: -1772808743261
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: id
+        value: ""
+  - url: http://localhost:4000/colaboradores/nome/:nome
+    name: Listar colaborador por Nome
+    meta:
+      id: req_5d36514aea7b48d698a3d667c9c31f31
+      created: 1772808894472
+      modified: 1772809093714
+      isPrivate: false
+      description: ""
+      sortKey: -1772808894472
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: nome
+        value: ""
+  - url: http://localhost:4000/colaboradores/cargo/:cargo
+    name: Listar colaborador por Cargo
+    meta:
+      id: req_bd7266915f8341f6815ad26b3b8b2bdf
+      created: 1772809097059
+      modified: 1772809206206
+      isPrivate: false
+      description: ""
+      sortKey: -1772809097059
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: cargo
+        value: ""
+  - url: http://localhost:4000/colaboradores
+    name: Cadastrar Colaborador
+    meta:
+      id: req_2c6c9254edb44a7ca886e3e40e1aad56
+      created: 1772809218073
+      modified: 1772809361493
+      isPrivate: false
+      description: ""
+      sortKey: -1772809218073
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Ana Souza",
+        	"cargo": "Analista de Dados",
+        	"salario": 4500,
+        	"data_ingresso": "2024-03-10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/colaboradores
+    name: Atualizar dados do Colaborador
+    meta:
+      id: req_38047b920dcc455ba56394fa7ab5136c
+      created: 1772809368667
+      modified: 1772809441802
+      isPrivate: false
+      description: ""
+      sortKey: -1772809368667
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 2,
+        	"nome": "Pedro Fariaz",
+        		"cargo": "Gerente de Ações",
+        		"salario": "6000.00",
+        		"data_ingresso": "2009-04-12"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/colaboradores/:id
+    name: Deletar Colaborador
+    meta:
+      id: req_3635304d702e4e43b1b63b2554b92333
+      created: 1772809478338
+      modified: 1772809520384
+      isPrivate: false
+      description: ""
+      sortKey: -1772809478338
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: id
+        value: "1"
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f55d62b1653aae546661fad630fb6c46f3aa92ea
+    created: 1772808236213
+    modified: 1772808236213
+environments:
+  name: Base Environment
+  meta:
+    id: env_f55d62b1653aae546661fad630fb6c46f3aa92ea
+    created: 1772808236205
+    modified: 1772808236205
+    isPrivate: false
