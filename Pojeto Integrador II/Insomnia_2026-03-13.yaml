@@ -1,0 +1,686 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Viagens compartilhadas
+meta:
+  id: wrk_892af49363f14d2ba63d8bfc8d3366c1
+  created: 1773344816917
+  modified: 1773344816917
+  description: ""
+collection:
+  - name: Veículos
+    meta:
+      id: fld_3783e305ce1d4216b60f7af2f7504f17
+      created: 1773071479152
+      modified: 1773344993391
+      sortKey: -1773071479152
+      description: ""
+    children:
+      - url: http://localhost:4000/veiculos
+        name: Listar todas os Veículos
+        meta:
+          id: req_01ed59a3923f434aa76ba92bdda79d18
+          created: 1773071491352
+          modified: 1773349175676
+          isPrivate: false
+          description: ""
+          sortKey: -1773071493840
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/veiculos/:id
+        name: Listar Veículo por Id
+        meta:
+          id: req_a99b559bbc9544ae8933c70c59cfabd9
+          created: 1773071558890
+          modified: 1773349170747
+          isPrivate: false
+          description: ""
+          sortKey: -1773071472974
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "1"
+      - url: http://localhost:4000/veiculos/
+        name: "Criar Veículo "
+        meta:
+          id: req_5b21e146543c425b9d49a8a56e40c9dd
+          created: 1773071603748
+          modified: 1773349096476
+          isPrivate: false
+          description: ""
+          sortKey: -1773071462441
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"modelo": "Gol",
+            	"placa": "AFT2415",
+            	"cor":"Rosa",
+            	"capacidadeMaxima": 4
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/veiculos
+        name: "Atualizar Veículo "
+        meta:
+          id: req_ccaa8b4c1fcd4c0aa3fdb39376db404c
+          created: 1773071817860
+          modified: 1773349188402
+          isPrivate: false
+          description: ""
+          sortKey: -1773071462341
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 2,
+              "genero": "Esporte",
+              "descricao": "Jogos de Espote"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/veiculos/:id
+        name: Deletar Veículo
+        meta:
+          id: req_c295d2733cfa4561a4a5de0d96a937b1
+          created: 1773071902949
+          modified: 1773349192568
+          isPrivate: false
+          description: ""
+          sortKey: -1773071462241
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "3"
+      - url: http://localhost:4000/veiculos/modelo/:modelo
+        name: Listar Veículo pelo Modelo
+        meta:
+          id: req_45e28c03bcd64b3a8e830f3876430748
+          created: 1773345604373
+          modified: 1773349280490
+          isPrivate: false
+          description: ""
+          sortKey: -1773071462491
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: modelo
+            value: G
+      - url: http://localhost:4000/veiculos/cor/:cor
+        name: Listar Veículo pela Cor
+        meta:
+          id: req_5251e8c2365141e88145b267a3a5ccc0
+          created: 1773345627629
+          modified: 1773349259914
+          isPrivate: false
+          description: ""
+          sortKey: -1773071462516
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: cor
+            value: P
+  - name: Viagens
+    meta:
+      id: fld_9991bb6468b949459b53c5434d2555a4
+      created: 1773071991594
+      modified: 1773344985612
+      sortKey: -1773071991594
+      description: ""
+    children:
+      - url: http://localhost:4000/viagens
+        name: Listar todas as Viagens
+        meta:
+          id: req_3be5040295d446a69dc6a784131afb12
+          created: 1773071995828
+          modified: 1773348265640
+          isPrivate: false
+          description: ""
+          sortKey: -1773071744934
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/viagens/:id
+        name: Listar Viagens por Id
+        meta:
+          id: req_4a0bc072d9e54d2581e340042b23d89b
+          created: 1773072041481
+          modified: 1773352488127
+          isPrivate: false
+          description: ""
+          sortKey: -1773071744834
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "3"
+      - url: http://localhost:4000/viagens/origem/:origem
+        name: Listar Viagens por Origem
+        meta:
+          id: req_fb6d14ec40744bd9803da7bac2542f5a
+          created: 1773072056444
+          modified: 1773411589566
+          isPrivate: false
+          description: ""
+          sortKey: -1773071619337
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: origem
+            value: p
+      - url: http://localhost:4000/viagens/cadastrar
+        name: Criar Viagem
+        meta:
+          id: req_34e3afeb131d4ca2a00639d054197c9a
+          created: 1773072340781
+          modified: 1773352443941
+          isPrivate: false
+          description: ""
+          sortKey: -1773071619237
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"origem": "Campo Grande",
+            	"destino": "Barra da Tijuca",
+            	"distancia": 42.3,
+            	"vagasDisponiveis": 3,
+            	"periodo": "tarde",
+            	"usuario": {"id": 1, "id": 2}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/viagens/
+        name: Atualizar Viagem
+        meta:
+          id: req_3efb64c064844bc1a0c0afe0bbb56549
+          created: 1773072618585
+          modified: 1773353065861
+          isPrivate: false
+          description: ""
+          sortKey: -1773071556538.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 3,
+            	"origem": "Campo Grande",
+            	"destino": "Barra da Tijuca",
+            	"distancia": 42.30,
+            	"periodo": "tarde",
+            	"vagasDisponiveis": 3,
+            	"preco": "110.75",
+            	"tempoEstimado": "42.00",
+            	"usuario": {
+            		"id": 2,
+            		"nome": "Joana Gama",
+            		"usuario": "Joana@email.com",
+            		"senha": "$2b$10$z9FPdql4S33ugXeF6WJAhef54w08rYMK8QK02n.226C/1q/7ojp0q",
+            		"foto": "imagem.com/naotemimagemaqui.jpg"
+            	},
+            	"veiculo": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/viagens/:id
+        name: Deletar Viagem
+        meta:
+          id: req_c5284e193e01465d879c70748dde4900
+          created: 1773072683578
+          modified: 1773411726638
+          isPrivate: false
+          description: ""
+          sortKey: -1773071556438.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "2"
+  - name: Usuarios
+    meta:
+      id: fld_211ea962c18f4ea1838aefa7981b415b
+      created: 1773235415618
+      modified: 1773235415618
+      sortKey: -1773235415618
+      description: ""
+    children:
+      - url: http://localhost:4000/usuarios/all
+        name: Listar Usuarios
+        meta:
+          id: req_37d90452838e42f89a5bc15e6785ba72
+          created: 1773235438384
+          modified: 1773409344292
+          isPrivate: false
+          description: ""
+          sortKey: -1773235438584
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/usuarios/cadastrar
+        name: Cadastrar Usuario
+        meta:
+          id: req_22a925ebdac243de916ac06aeae5851b
+          created: 1773235489124
+          modified: 1773409347344
+          isPrivate: false
+          description: ""
+          sortKey: -1773235438534
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "ADM MASTER",
+            	"usuario": "admthelord@email.com",
+            	"senha": "SenhaDoAdm",
+            	"foto": "imagem.com/ADM.jpg",
+            	"campus": "UFRJ"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/usuarios/:id
+        name: Listar Usuario por Id
+        meta:
+          id: req_e5c4f17f110243d788579c58afc97cc5
+          created: 1773236753500
+          modified: 1773345491707
+          isPrivate: false
+          description: ""
+          sortKey: -1773235438484
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "1"
+      - url: http://localhost:4000/usuarios/atualizar
+        name: Atualizar Usuario
+        meta:
+          id: req_f2085b433a724bc2a25d6c56d1213472
+          created: 1773236848304
+          modified: 1773407019104
+          isPrivate: false
+          description: ""
+          sortKey: -1773153710356
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+            	"nome": "Lucas Helix",
+            	"usuario": "lucah@email.com",
+            	"senha": "LucasOMelhor",
+            	"foto": "imagem.com/naotemimagemaqui.jpg",
+            	"campus": "UFF"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/usuarios/logar
+        name: Autenticar Usuario
+        meta:
+          id: req_418e45d2509a4b37baa503de03b2b824
+          created: 1773237630304
+          modified: 1773409349486
+          isPrivate: false
+          description: ""
+          sortKey: -1773235438509
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"usuario": "admthelord@email.com",
+            	"senha": "SenhaDoAdm"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/usuarios/campus/:campus
+        name: Listar Usuario pelo campus
+        meta:
+          id: req_de815e7876ed40eb8ac9ea729a1cde16
+          created: 1773406991125
+          modified: 1773407060073
+          isPrivate: false
+          description: ""
+          sortKey: -1773235438434
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: "{% response 'body', 'req_418e45d2509a4b37baa503de03b2b824',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: campus
+            value: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_241ef5774d9948649a4d99e1df6e4034
+    created: 1773070944947
+    modified: 1773070944947
+environments:
+  name: Base Environment
+  meta:
+    id: env_0b43e8f539b44487bacc79c8d1643116
+    created: 1773070944942
+    modified: 1773070944942
+    isPrivate: false
