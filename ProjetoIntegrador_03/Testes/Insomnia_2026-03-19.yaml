@@ -1,0 +1,1327 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Fitness
+meta:
+  id: wrk_cc4ff0b4e2344c489fd1b108c639ef27
+  created: 1773924926543
+  modified: 1773924926543
+  description: ""
+collection:
+  - name: Fitness
+    meta:
+      id: fld_a03ec55a9fe44d3e9e47223ee5fc37f0
+      created: 1773926472628
+      modified: 1773934324674
+      sortKey: -1773926472628
+      description: ""
+    children:
+      - name: Exercício
+        meta:
+          id: fld_4814394782e14b839044a0ea909d43d4
+          created: 1772543607377
+          modified: 1773935487463
+          sortKey: -1773926475559
+          description: ""
+        children:
+          - url: http://localhost:4000/exercicios/
+            name: Listar todas os Exercicios
+            meta:
+              id: req_0b27bf3ec1d04b1091e255ce838b6f6c
+              created: 1772543769274
+              modified: 1773935141999
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716575
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:4000/exercicios/:id
+            name: Listar Exercícios pelo id
+            meta:
+              id: req_6b0069bf19a54a2899fc183de9646fd2
+              created: 1772546559037
+              modified: 1773934684351
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716550
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "1"
+          - url: localhost:4000/exercicios/repeticoes/min/:repeticao
+            name: Listar Exercícios pela repetição min
+            meta:
+              id: req_a44324bba3944dbf90b30c5fa9ec6420
+              created: 1772547363988
+              modified: 1773935267758
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716500
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: repeticao
+                value: "1"
+          - url: http://localhost:4000/exercicios/cadastrar
+            name: Criar Exercício
+            meta:
+              id: req_bc03fd0d9aca4eef804860b25a1670d6
+              created: 1772549998806
+              modified: 1773941242522
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716650
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Agachamento Livre",
+                  "imagem": "https://example.com/agachamento.jpg",
+                  "serie": 4,
+                  "repeticao": 12,
+                  "tempoEstimado": 70,
+                  "categoria": { "id": 2 }
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/exercicios/atualizar
+            name: Atualizar Exercicios
+            meta:
+              id: req_9b4f460b8234402fb93d85e54a94c8dd
+              created: 1772551843256
+              modified: 1773947740040
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716600
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                  "nome": "Agachamento",
+                  "imagem": "https://example.com/agachamento.jpg",
+                  "serie": 4,
+                  "repeticao": 12,
+                  "tempoEstimado": 70,
+                  "categoria": { "id": 2 }
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:4000/exercicios/:id
+            name: Deletar postagem
+            meta:
+              id: req_d60bc2b9878648ceb6f1777455920803
+              created: 1772553398015
+              modified: 1773947749466
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716150
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "2"
+          - url: localhost:4000/exercicios/repeticoes/max/:repeticao
+            name: Listar Exercícios pela repetição max
+            meta:
+              id: req_9006cef11aa34ea083a545f27ea8a173
+              created: 1773935208817
+              modified: 1773935232168
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716412.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: repeticao
+                value: "20"
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+      - name: Categoria
+        meta:
+          id: fld_cd8b771329834e5b88cfaae2cfcdeaf5
+          created: 1772626273249
+          modified: 1773934980252
+          sortKey: -1773926475459
+          description: ""
+        children:
+          - url: http://localhost:4000/categorias/cadastrar
+            name: Criar Categoria
+            meta:
+              id: req_58132abd2172406f9140d35070748f0c
+              created: 1772626280502
+              modified: 1773941415967
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456237
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                  "nome": "Treino Pernas",
+                  "icone": "Pernas-icon.png",
+                  "descricao": "Melhora a força do Forca das pernas, auxilia na postura e aumenta a agilidade."
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/categorias/
+            name: Listar todas as Categorias
+            meta:
+              id: req_66cdd71b16e1446fb38350dfc1102eee
+              created: 1772626309856
+              modified: 1773934997504
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/categorias/:id
+            name: Listar Categoria por id
+            meta:
+              id: req_4a610fda008d4eecbd465b1b3b67d8ff
+              created: 1772626330402
+              modified: 1773935009432
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456112
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "2"
+          - url: http://localhost:4000/categorias/:id
+            name: Deletar Categoria
+            meta:
+              id: req_a8ceebf4a9824e4ead2f438facacd018
+              created: 1772626415063
+              modified: 1773928390615
+              isPrivate: false
+              description: ""
+              sortKey: -1772626415063
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "3"
+          - url: http://localhost:4000/categorias/atualizar
+            name: Atualizar Categoria
+            meta:
+              id: req_91901103e5d74da6ab9af2f44a8e2f9b
+              created: 1772626456037
+              modified: 1773928388005
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456037
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"descricao": "Qualquer coisa"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/categorias/nome/:nome
+            name: Listar Categoria por nome
+            meta:
+              id: req_e33a719d09d645f5b7c710e659bb6c64
+              created: 1773925341891
+              modified: 1773935043485
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456099.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: nome
+                value: ""
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+      - name: Usuario
+        meta:
+          id: fld_84bfcc8b119549d6afb631a92b83b821
+          created: 1773678782356
+          modified: 1773934024614
+          sortKey: -1773926475659
+          description: ""
+        children:
+          - url: http://localhost:4000/usuarios/cadastrar
+            name: Cadastrar Usuário
+            meta:
+              id: req_cfdaa0643a23480194a4341d34702816
+              created: 1773678782358
+              modified: 1773940982425
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456237
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Pedro",
+                	"usuario": "Pedrinho@gmail.com",
+                	"senha": "Pedro123",
+                	"dataNascimento": "2011-01-12",
+                	"peso": 67,
+                	"altura": 1.57
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/usuarios/all
+            name: Listar todos os Usuários
+            meta:
+              id: req_19703b4de0664b7eb0d7ba307fd947c9
+              created: 1773678782359
+              modified: 1773934450596
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/usuarios/:id
+            name: Listar Usuário por ID
+            meta:
+              id: req_5b9e0e94badf44a48d5b231e2f8e6a50
+              created: 1773678782361
+              modified: 1773934474281
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456112
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "1"
+          - url: http://localhost:4000/usuarios/atualizar
+            name: Atualizar Usuario
+            meta:
+              id: req_2599ce17ba3f4f8fbeaa758cde85bccd
+              created: 1773678782363
+              modified: 1773934511486
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456037
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"descricao": "Mudando a desc 01",
+                	"tema": {
+                		"id": 1
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/usuarios/logar
+            name: Autenticar Usuário
+            meta:
+              id: req_5c56d47a855f4f0581c4dfc8befc2b43
+              created: 1773678782364
+              modified: 1773947642103
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456187
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"usuario": "Pedrinho@gmail.com",
+                	"senha": "Pedro123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:4000/usuarios/imc/maior/:imc
+            name: Listar Usuarios por IMC max
+            meta:
+              id: req_4519a0acb5024106a26953c61abde58a
+              created: 1773944069128
+              modified: 1773947690476
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456124.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: imc
+                value: "50"
+          - url: http://localhost:4000/usuarios/imc/maior/:imc
+            name: Listar Usuarios por IMC min
+            meta:
+              id: req_a3768eeebf79484e9829b1605d7c6af1
+              created: 1773944116043
+              modified: 1773947701074
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456118.25
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: imc
+                value: "10"
+        headers:
+          - name: Authrization
+            value: ""
+            description: ""
+            disabled: false
+  - name: Fitness - Render
+    meta:
+      id: fld_3cd6403a41e949e38b5212f4760b8999
+      created: 1773926489025
+      modified: 1773928519402
+      sortKey: -1773890108699.5
+      description: ""
+    children:
+      - name: Exercício
+        meta:
+          id: fld_aacbea14b07646b1b2e505cdb98b3bc7
+          created: 1773926489027
+          modified: 1773926489027
+          sortKey: -1773926475559
+          description: ""
+        children:
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/all
+            name: Listar todas as postagens
+            meta:
+              id: req_6b5e21ed318145d08b86ffee7a4da3cf
+              created: 1773926489028
+              modified: 1773927335955
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716575
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/:id
+            name: Listar Exercícios pelo id
+            meta:
+              id: req_539b2254f0d74fd89d3fe7927e17603e
+              created: 1773926489030
+              modified: 1773927347399
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716550
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "3"
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/nome/:nome
+            name: Listar Exercícios pelo Nome
+            meta:
+              id: req_591e192a815642ee85306e241a555321
+              created: 1773926489032
+              modified: 1773927351641
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716500
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: nome
+                value: ""
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/cadastrar
+            name: Criar Exercício
+            meta:
+              id: req_2a94ba0b63dc4e5d85a3d4e773140322
+              created: 1773926489034
+              modified: 1773927327989
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716650
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Supino Reto com Barra",
+                  "imagem": "https://example.com/supino-reto.jpg",
+                  "serie": 3,
+                  "repeticao": 10,
+                  "tempoEstimado": 60,
+                	"categoria": {"id": 1}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/atualizar
+            name: Atualizar postagem
+            meta:
+              id: req_d2fbc4c679934bf8bb79ea7769d5ea9d
+              created: 1773926489035
+              modified: 1773927332305
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716600
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"id": 1,
+                		"titulo": "Titulo 4",
+                		"texto": "Texto do titulo 4",
+                		"data": "2026-03-04T17:06:04.464Z",
+                		"tema": {"id": 1},
+                		"usuario": {"id": 1}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/:id
+            name: Deletar postagem
+            meta:
+              id: req_6080b97438cd43d98755b6dd126dbdda
+              created: 1773926489037
+              modified: 1773927383859
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716150
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: ""
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/repeticoes/min/:repeticao
+            name: Listar Exercícios por mínimo de Repetições
+            meta:
+              id: req_dff3d7c6e5224af0acdbb45d19afd6db
+              created: 1773927109290
+              modified: 1773927371037
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716325
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: repeticao
+                value: ""
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/repeticoes/max/:repeticao
+            name: Listar Exercícios por máximo de Repetições
+            meta:
+              id: req_ef7bd6de97b54bb299795afb2b83d3f2
+              created: 1773927138902
+              modified: 1773927376262
+              isPrivate: false
+              description: ""
+              sortKey: -1772543716237.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: repeticao
+                value: ""
+      - name: Categoria
+        meta:
+          id: fld_39fa0e5a641348f690bc0e4f9d99c8a5
+          created: 1773926489039
+          modified: 1773926489039
+          sortKey: -1773926475459
+          description: ""
+        children:
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/exercicios/cadastrar
+            name: Criar Categoria
+            meta:
+              id: req_9b50a6b614c04896a6a2c6dbef3b0654
+              created: 1773926489040
+              modified: 1773927402038
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456237
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                  "nome": "dasdad",
+                  "icone": "chest-icon.png",
+                  "descricao": "Melhora a força do tronco, auxilia na postura e aumenta a capacidade de empurrar objetos."
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/categorias
+            name: Listar todas as Categorias
+            meta:
+              id: req_321c0209a4424a32903edf3aba39ccfc
+              created: 1773926489042
+              modified: 1773927407064
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/categorias/:id
+            name: Listar Categoria por id
+            meta:
+              id: req_b93aafff87504230bd5caa0a9d01237b
+              created: 1773926489044
+              modified: 1773927412670
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456112
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "4"
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/categorias/:id
+            name: Deletar Categoria
+            meta:
+              id: req_3e38ab6204e54ec59acabbffcf49111d
+              created: 1773926489045
+              modified: 1773927424053
+              isPrivate: false
+              description: ""
+              sortKey: -1772626415063
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "3"
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/categorias/atualizar
+            name: Atualizar Categoria
+            meta:
+              id: req_44553de721064e9f890034ddd389cd1d
+              created: 1773926489047
+              modified: 1773927420209
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456037
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"descricao": "Qualquer coisa"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/nome/:nome
+            name: Listar Categoria por nome
+            meta:
+              id: req_563c8d6728614b4ea43fddf84b42b479
+              created: 1773926489048
+              modified: 1773927416651
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456099.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5de19a025cc249bebb11ce3124f2730b',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: nome
+                value: "1"
+      - name: Usuario
+        meta:
+          id: fld_9061f92bf7ed4c01aaa5860ca534a62d
+          created: 1773926489050
+          modified: 1773928569611
+          sortKey: -1773926475659
+          description: ""
+        children:
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/cadastrar
+            name: Cadastrar Usuário
+            meta:
+              id: req_4b264e231f9b4a7dba53a4948d6aac92
+              created: 1773926489051
+              modified: 1773928530635
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456237
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Root",
+                	"usuario": "root@root.com",
+                	"senha": "rootroot",
+                	"foto": " "
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/all
+            name: Listar todos os Usuários
+            meta:
+              id: req_e77bf8882bd44be09bcdb3bc6150a62b
+              created: 1773926489053
+              modified: 1773927317874
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/:id
+            name: Listar Usuário por ID
+            meta:
+              id: req_9fa0de3695fa4c7fad02aea5ba07cf36
+              created: 1773926489055
+              modified: 1773927321761
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456112
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: "1"
+          - url: https://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/atualizar
+            name: Atualizar Usuario
+            meta:
+              id: req_acac218a883f4ec1aefa90e0e9c340e8
+              created: 1773926489056
+              modified: 1773927292651
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456037
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"descricao": "Mudando a desc 01",
+                	"tema": {
+                		"id": 1
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+              - name: Authorization
+                value: "{% response 'body', 'req_5c56d47a855f4f0581c4dfc8befc2b43',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: hhttps://projeto-fitness-customizado-bkend-mv9i.onrender.com/usuarios/logar
+            name: Autenticar Usuário
+            meta:
+              id: req_ca3d28294df0475f955244b3b7e79bb4
+              created: 1773926489057
+              modified: 1773928528734
+              isPrivate: false
+              description: ""
+              sortKey: -1772626456187
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"usuario": "root@root.com",
+                	"senha": "rootroot"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+    headers:
+      - name: Authorization
+        value: "{% response 'body', 'req_ca3d28294df0475f955244b3b7e79bb4',
+          'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        description: ""
+        disabled: false
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_995b3b78fd7f0a1264faff586e1845b742130be4
+    created: 1773924926592
+    modified: 1773924926592
+environments:
+  name: Base Environment
+  meta:
+    id: env_995b3b78fd7f0a1264faff586e1845b742130be4
+    created: 1773924926554
+    modified: 1773924926554
+    isPrivate: false
